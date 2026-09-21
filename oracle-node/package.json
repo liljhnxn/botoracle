@@ -1,0 +1,19 @@
+{
+  "name": "botoracle-node",
+  "version": "1.0.0",
+  "description": "Standalone BotOracle Provider Node Daemon for Botchain Testnet",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "viem": "^2.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

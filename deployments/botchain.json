@@ -1,0 +1,16 @@
+{
+  "network": "botchain",
+  "chainId": "968",
+  "timestamp": "2026-09-21T13:03:34.195Z",
+  "deployer": "0x40a7CD9467f97461cE23D3FDC520CF8aD286aAC6",
+  "contracts": {
+    "BotOracle": {
+      "address": "0xf52359a1766F6713bF698584F78BbD6a9D4edd11",
+      "explorerUrl": "https://scan.bohr.life/address/0xf52359a1766F6713bF698584F78BbD6a9D4edd11"
+    },
+    "OracleConsumerExample": {
+      "address": "0xE1F9B6bB42B69651B54710B4B0AF746b10fc46D2",
+      "explorerUrl": "https://scan.bohr.life/address/0xE1F9B6bB42B69651B54710B4B0AF746b10fc46D2"
+    }
+  }
+}
