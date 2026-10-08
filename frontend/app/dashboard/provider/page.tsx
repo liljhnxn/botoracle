@@ -147,7 +147,7 @@ export default function ProviderDashboardPage() {
           <Wallet className="h-12 w-12 text-slate-500 mx-auto" />
           <h2 className="text-xl font-bold font-mono text-white">Connect Provider Wallet</h2>
           <p className="text-xs text-slate-400">
-            Please connect the wallet controlling your BotOracle provider node on Botchain Testnet.
+            Please connect the wallet controlling your BotOracle provider node on BOT Chain Mainnet.
           </p>
         </div>
       </div>
@@ -248,12 +248,12 @@ export default function ProviderDashboardPage() {
             </span>
           </div>
           <a
-            href={`https://scan.bohr.life/tx/${hash}`}
+            href={`https://scan.botchain.ai/tx/${hash}`}
             target="_blank"
             rel="noreferrer"
             className="text-primary hover:underline inline-flex items-center gap-1"
           >
-            <span>BohrScan</span>
+            <span>BotScan</span>
             <ExternalLink className="h-3 w-3" />
           </a>
         </div>
@@ -372,7 +372,7 @@ export default function ProviderDashboardPage() {
             <h3 className="text-base font-bold font-mono text-white">Submit Price Observation</h3>
           </div>
           <p className="text-xs text-slate-400 mt-1">
-            Report your price observation for an open round on Botchain Testnet.
+            Report your price observation for an open round on BOT Chain Mainnet.
           </p>
         </div>
 
@@ -462,7 +462,7 @@ export default function ProviderDashboardPage() {
         {isConfirming && (
           <div className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono flex items-center gap-2">
             <RefreshCw className="h-3.5 w-3.5 animate-spin" />
-            <span>Confirming observation transaction on Botchain Testnet...</span>
+            <span>Confirming observation transaction on BOT Chain Mainnet...</span>
           </div>
         )}
         {isConfirmed && (

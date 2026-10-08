@@ -142,7 +142,7 @@ export default function RegisterProviderPage() {
             <Wallet className="h-12 w-12 text-slate-500 mx-auto" />
             <h3 className="text-lg font-mono font-bold text-white">Wallet Connection Required</h3>
             <p className="text-xs text-slate-400 max-w-sm mx-auto">
-              Please connect your Web3 wallet pointing to Botchain Testnet (Chain ID 968) to register as an oracle provider.
+              Please connect your Web3 wallet pointing to BOT Chain Mainnet (Chain ID 677) to register as an oracle provider.
             </p>
           </div>
         ) : isAlreadyRegistered ? (
@@ -242,7 +242,7 @@ export default function RegisterProviderPage() {
                 </p>
                 {hash && (
                   <a
-                    href={`https://scan.bohr.life/tx/${hash}`}
+                    href={`https://scan.botchain.ai/tx/${hash}`}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1 text-primary hover:underline text-xs"

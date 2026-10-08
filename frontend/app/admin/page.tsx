@@ -147,7 +147,7 @@ export default function AdminPage() {
           </p>
           <div className="p-3 rounded-lg bg-surface-50 border border-border text-[11px] font-mono text-slate-400 text-left">
             <div>Contract: {BOTORACLE_ADDRESS}</div>
-            <div className="mt-1">Network: Botchain Testnet (Chain ID 968)</div>
+            <div className="mt-1">Network: BOT Chain Mainnet (Chain ID 677)</div>
           </div>
         </div>
       </div>
@@ -194,12 +194,12 @@ export default function AdminPage() {
             </span>
           </div>
           <a
-            href={`https://scan.bohr.life/tx/${hash}`}
+            href={`https://scan.botchain.ai/tx/${hash}`}
             target="_blank"
             rel="noreferrer"
             className="text-primary hover:underline inline-flex items-center gap-1"
           >
-            <span>BohrScan</span>
+            <span>BotScan</span>
             <ExternalLink className="h-3 w-3" />
           </a>
         </div>

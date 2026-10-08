@@ -53,10 +53,21 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="mx-auto max-w-7xl px-4 pt-16 pb-20 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-xs font-mono font-medium text-primary mb-6 shadow-glow-sm">
+        <a
+          href={`https://scan.botchain.ai/address/${BOTORACLE_ADDRESS}`}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 hover:bg-primary/20 px-4 py-1.5 text-xs font-mono font-medium text-primary mb-6 shadow-glow-sm transition-all group"
+          title="View Contract on BOT Chain Mainnet Explorer"
+        >
           <span className="flex h-2 w-2 rounded-full bg-primary animate-ping" />
-          <span>Live on Botchain Testnet (Chain ID 968)</span>
-        </div>
+          <span>Live on BOT Chain Mainnet (Chain ID 677)</span>
+          <span className="text-primary/40">•</span>
+          <span className="text-slate-300 group-hover:text-white flex items-center gap-1">
+            <span>View on Explorer</span>
+            <ExternalLink className="h-3 w-3 text-primary" />
+          </span>
+        </a>
 
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-mono font-bold tracking-tight text-white max-w-4xl mx-auto leading-tight">
           BOT<span className="text-primary">ORACLE</span>
@@ -86,6 +97,15 @@ export default function HomePage() {
             <Cpu className="h-4 w-4 text-primary" />
             <span>Become a Provider</span>
           </Link>
+          <a
+            href={`https://scan.botchain.ai/address/${BOTORACLE_ADDRESS}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 rounded-lg bg-surface-50 border border-border px-6 py-3 text-sm font-semibold text-slate-300 hover:border-primary/50 transition-all hover:bg-surface-100 hover:text-white"
+          >
+            <ExternalLink className="h-4 w-4 text-primary" />
+            <span>Mainnet Explorer</span>
+          </a>
         </div>
 
         {/* Real Live Metrics from Blockchain */}
@@ -226,12 +246,12 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href="https://scan.bohr.life"
+                href="https://scan.botchain.ai"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-surface-50 border border-border px-5 py-2.5 text-xs font-semibold text-slate-200 hover:text-white hover:border-slate-600 transition-all"
               >
-                <span>BohrScan Explorer</span>
+                <span>BotScan Explorer</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </div>

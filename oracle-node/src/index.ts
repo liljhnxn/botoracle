@@ -46,8 +46,8 @@ async function runOracleNode() {
 
   console.log(`Provider Address:  ${account.address}`);
   console.log(`Contract Address:  ${contractAddress}`);
-  console.log(`Network:           Botchain Testnet (Chain ID 968)`);
-  console.log(`RPC Endpoint:      ${process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life"}`);
+  console.log(`Network:           BOT Chain Mainnet (Chain ID 677)`);
+  console.log(`RPC Endpoint:      ${process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai"}`);
   console.log(`Poll Interval:     ${pollIntervalMs / 1000}s`);
   console.log(`Primary Adapter:   ${coinSource.name}`);
   console.log("==================================================\n");
@@ -159,7 +159,7 @@ async function runOracleNode() {
         });
 
         console.log(`✓ Submitted! Tx Hash: ${hash}`);
-        console.log(`  Explorer: https://scan.bohr.life/tx/${hash}`);
+        console.log(`  Explorer: https://scan.botchain.ai/tx/${hash}`);
       }
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);

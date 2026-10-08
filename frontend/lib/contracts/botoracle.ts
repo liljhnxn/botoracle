@@ -1,9 +1,9 @@
-import { botchainTestnet } from "../chain";
+import { activeBotchain } from "../chain";
 
 export const BOTORACLE_ADDRESS = (process.env.NEXT_PUBLIC_BOTORACLE_CONTRACT_ADDRESS ||
   "0x0000000000000000000000000000000000000000") as `0x${string}`;
 
-export const BOTORACLE_CHAIN = botchainTestnet;
+export const BOTORACLE_CHAIN = activeBotchain;
 
 export const BOTORACLE_ABI = [
   // Views

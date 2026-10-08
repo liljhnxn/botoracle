@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
-import { botchainTestnet } from "../lib/chain";
+import { botchain } from "../lib/chain";
 import { formatAddress } from "../lib/identity";
+import { BOTORACLE_ADDRESS } from "../lib/contracts/botoracle";
 import {
   Activity,
   Layers,
@@ -29,7 +30,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [walletDropdown, setWalletDropdown] = useState(false);
 
-  const isWrongNetwork = isConnected && chainId !== botchainTestnet.id;
+  const isWrongNetwork = isConnected && chainId !== botchain.id;
 
   const navLinks = [
     { name: "Feeds", href: "/feeds", icon: Activity },
@@ -52,7 +53,7 @@ export function Navbar() {
               BOT<span className="text-primary">ORACLE</span>
             </span>
             <span className="text-[10px] tracking-widest text-slate-400 uppercase -mt-1 font-mono">
-              Botchain Testnet
+              BOT Chain Mainnet
             </span>
           </div>
         </Link>
@@ -81,21 +82,33 @@ export function Navbar() {
 
         {/* Wallet & Network Controls */}
         <div className="hidden sm:flex items-center gap-3">
+          {/* Mainnet Explorer Direct Link */}
+          <a
+            href={`https://scan.botchain.ai/address/${BOTORACLE_ADDRESS}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 rounded-md bg-surface-50 hover:bg-surface-100 border border-border hover:border-primary/40 px-2.5 py-1.5 text-xs font-mono text-slate-300 hover:text-white transition-all group"
+            title="View Protocol Contract on BotScan"
+          >
+            <ExternalLink className="h-3.5 w-3.5 text-primary group-hover:scale-110 transition-transform" />
+            <span>Explorer</span>
+          </a>
+
           {/* Network Indicator */}
           {isConnected && (
             <div>
               {isWrongNetwork ? (
                 <button
-                  onClick={() => switchChain({ chainId: botchainTestnet.id })}
+                  onClick={() => switchChain({ chainId: botchain.id })}
                   className="flex items-center gap-1.5 rounded-md bg-accent-amber/10 px-2.5 py-1.5 text-xs font-mono font-medium text-accent-amber border border-accent-amber/30 hover:bg-accent-amber/20 transition-all"
                 >
                   <AlertTriangle className="h-3.5 w-3.5" />
-                  <span>Wrong Network</span>
+                  <span>Switch to BOT Chain Mainnet</span>
                 </button>
               ) : (
                 <div className="flex items-center gap-2 rounded-md bg-surface-50 px-2.5 py-1.5 text-xs font-mono text-slate-300 border border-border">
                   <div className="h-2 w-2 rounded-full bg-accent-emerald animate-pulse" />
-                  <span>Botchain 968</span>
+                  <span>BOT Chain Mainnet (677)</span>
                 </div>
               )}
             </div>
@@ -132,7 +145,7 @@ export function Navbar() {
                   </div>
                   <div className="py-1">
                     <a
-                      href={`https://scan.bohr.life/address/${address}`}
+                      href={`https://scan.botchain.ai/address/${address}`}
                       target="_blank"
                       rel="noreferrer"
                       className="flex items-center justify-between rounded px-3 py-1.5 text-xs text-slate-300 hover:bg-surface-50 hover:text-white"
@@ -190,6 +203,18 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
+          <a
+            href={`https://scan.botchain.ai/address/${BOTORACLE_ADDRESS}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-slate-300 hover:bg-surface-50 hover:text-white"
+          >
+            <div className="flex items-center gap-3">
+              <ExternalLink className="h-4 w-4 text-primary" />
+              <span>Mainnet Explorer</span>
+            </div>
+            <span className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">677</span>
+          </a>
           <div className="pt-3 border-t border-border mt-2">
             {!isConnected ? (
               <button
@@ -206,7 +231,7 @@ export function Navbar() {
             ) : (
               <div className="space-y-2">
                 <div className="text-xs font-mono text-slate-400 px-3">
-                  {formatAddress(address)} (Botchain 968)
+                  {formatAddress(address)} (BOT Chain Mainnet)
                 </div>
                 <button
                   onClick={() => {

@@ -149,7 +149,7 @@ export default function ProvidersPage() {
                       </td>
                       <td className="py-3.5 px-4 text-slate-400">
                         <a
-                          href={`https://scan.bohr.life/address/${p.wallet}`}
+                          href={`https://scan.botchain.ai/address/${p.wallet}`}
                           target="_blank"
                           rel="noreferrer"
                           className="hover:text-white inline-flex items-center gap-1"

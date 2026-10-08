@@ -1,0 +1,17 @@
+{
+  "network": "botchain_mainnet",
+  "chainId": "677",
+  "timestamp": "2026-10-08T11:23:45.000Z",
+  "deployer": "0x83acc57bb9CDe889b248E9c740F5248637cd89f4",
+  "txHash": "0x4d309cc0f60878cbede911df6247bd4be19dc75595c5a8f617b9e05b19e3ff17",
+  "blockNumber": 25960805,
+  "gasUsed": "4920144",
+  "gasPriceGwei": "20.0",
+  "feePaidBot": "0.09840288",
+  "contracts": {
+    "BotOracle": {
+      "address": "0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa",
+      "explorerUrl": "https://scan.botchain.ai/address/0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa"
+    }
+  }
+}

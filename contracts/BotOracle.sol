@@ -7,7 +7,7 @@ import "./interfaces/IBotOracle.sol";
 
 /**
  * @title BotOracle
- * @notice Production-quality decentralized oracle protocol running on Botchain Testnet (Chain ID: 968).
+ * @notice Production-quality decentralized oracle protocol running on BOT Chain Mainnet (Chain ID: 677).
  * @dev External providers stake BOT, report values for registered feeds, and receive rewards.
  * Submissions are deterministically aggregated using median calculations, and outliers outside
  * deviationThresholdBps are penalized according to protocol rules.

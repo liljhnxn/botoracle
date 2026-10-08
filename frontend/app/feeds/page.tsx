@@ -58,7 +58,7 @@ export default function FeedsPage() {
             <span>RPC Read Error</span>
           </div>
           <p className="text-xs text-slate-300">
-            Could not fetch feed registry. Ensure your wallet or client is pointed to Botchain Testnet (Chain ID 968).
+            Could not fetch feed registry. Ensure your wallet or client is pointed to BOT Chain Mainnet (Chain ID 677).
           </p>
         </div>
       )}

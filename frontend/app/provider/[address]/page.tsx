@@ -109,12 +109,12 @@ export default function ProviderProfilePage() {
           <div className="flex flex-wrap items-center gap-4 mt-2 text-xs font-mono text-slate-400">
             <span className="text-white">{address}</span>
             <a
-              href={`https://scan.bohr.life/address/${address}`}
+              href={`https://scan.botchain.ai/address/${address}`}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1 text-primary hover:underline"
             >
-              <span>View in BohrScan</span>
+              <span>View in BotScan</span>
               <ExternalLink className="h-3 w-3" />
             </a>
           </div>

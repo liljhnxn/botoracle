@@ -5,7 +5,7 @@ import { Agent, setGlobalDispatcher } from "undici";
 
 dotenv.config();
 
-// Ensure undici allows generous connect timeout for Bohr RPC
+// Ensure undici allows generous connect timeout for RPC
 setGlobalDispatcher(
   new Agent({
     connect: { timeout: 60000 },
@@ -14,7 +14,7 @@ setGlobalDispatcher(
   })
 );
 
-const BOTCHAIN_RPC_URL = process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life";
+const BOTCHAIN_RPC_URL = process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai";
 const DEPLOYER_PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY;
 
 const config: HardhatUserConfig = {
@@ -23,7 +23,7 @@ const config: HardhatUserConfig = {
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200,
+        runs: 1,
       },
       viaIR: false,
     },
@@ -38,8 +38,9 @@ const config: HardhatUserConfig = {
     },
     botchain: {
       url: BOTCHAIN_RPC_URL,
-      chainId: 968,
+      chainId: 677,
       accounts: DEPLOYER_PRIVATE_KEY ? [DEPLOYER_PRIVATE_KEY] : [],
+      gasPrice: 20000000000, // 20 Gwei floor
       timeout: 120000,
     },
   },
@@ -56,10 +57,10 @@ const config: HardhatUserConfig = {
     customChains: [
       {
         network: "botchain",
-        chainId: 968,
+        chainId: 677,
         urls: {
-          apiURL: "https://scan.bohr.life/api",
-          browserURL: "https://scan.bohr.life",
+          apiURL: "https://scan.botchain.ai/api",
+          browserURL: "https://scan.botchain.ai",
         },
       },
     ],

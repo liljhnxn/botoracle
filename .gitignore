@@ -25,6 +25,7 @@ frontend/out/
 build/
 dist/
 oracle-node/dist/
+*.tsbuildinfo
 
 # Logs & Diagnostics
 npm-debug.log*

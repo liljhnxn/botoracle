@@ -11,14 +11,14 @@ setGlobalDispatcher(
 
 async function main() {
   const consumerAddress = process.env.NEXT_PUBLIC_CONSUMER_CONTRACT_ADDRESS || "0xE1F9B6bB42B69651B54710B4B0AF746b10fc46D2";
-  const oracleAddress = process.env.NEXT_PUBLIC_BOTORACLE_CONTRACT_ADDRESS || "0xf52359a1766F6713bF698584F78BbD6a9D4edd11";
+  const oracleAddress = process.env.NEXT_PUBLIC_BOTORACLE_CONTRACT_ADDRESS || "0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa";
 
   console.log("==================================================");
   console.log("TESTING ON-CHAIN ORACLE CONSUMER EXAMPLE");
   console.log("==================================================");
   console.log(`Consumer Address: ${consumerAddress}`);
   console.log(`Oracle Address:   ${oracleAddress}`);
-  console.log(`Network:          Botchain Testnet (Chain ID 968)`);
+  console.log(`Network:          BOT Chain Mainnet (Chain ID 677)`);
   console.log("--------------------------------------------------");
 
   const consumer = await ethers.getContractAt("OracleConsumerExample", consumerAddress);

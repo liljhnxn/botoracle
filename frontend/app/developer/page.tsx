@@ -114,8 +114,30 @@ main();`;
           Consume BotOracle Feeds
         </h1>
         <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-3xl">
-          Integrate verified data streams into your smart contracts and off-chain applications on Botchain.
+          Integrate verified data streams into your smart contracts and off-chain applications on BOT Chain Mainnet.
         </p>
+      </div>
+
+      {/* Mainnet Contract & Explorer Banner */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-primary/30 bg-primary/5 p-4 font-mono">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-accent-emerald animate-pulse" />
+            <span className="text-xs font-semibold text-white">BOT Chain Mainnet (Chain ID: 677)</span>
+          </div>
+          <div className="text-xs text-slate-300 break-all">
+            Contract: <span className="text-primary font-bold">{BOTORACLE_ADDRESS}</span>
+          </div>
+        </div>
+        <a
+          href={`https://scan.botchain.ai/address/${BOTORACLE_ADDRESS}`}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 rounded-lg bg-surface-50 border border-primary/30 hover:border-primary px-3.5 py-2 text-xs text-white hover:bg-surface-100 transition-all shadow-glow-sm"
+        >
+          <span>View on Mainnet Explorer</span>
+          <ExternalLink className="h-3.5 w-3.5 text-primary" />
+        </a>
       </div>
 
       {/* Interactive Consumer Playground */}

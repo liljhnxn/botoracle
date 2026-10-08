@@ -2,7 +2,7 @@
 
 > *"Trusted data for decentralized applications."*
 
-BotOracle is an end-to-end, production-quality decentralized oracle network built for the **Botchain Testnet (Chain ID: 968)**. The protocol establishes verifiable on-chain truth through independent provider reporting, fixed-point deterministic median aggregation, economic collateral staking in native BOT, and automated deviation-based slashing.
+BotOracle is an end-to-end, production-quality decentralized oracle network built for the **BOT Chain Mainnet (Chain ID: 677)**. The protocol establishes verifiable on-chain truth through independent provider reporting, fixed-point deterministic median aggregation, economic collateral staking in native BOT, and automated deviation-based slashing.
 
 ---
 
@@ -22,7 +22,7 @@ graph TD
         NodeN["Provider Node N (Stake: 2 BOT)"]
     end
 
-    subgraph Botchain["Botchain Testnet (Chain ID 968)"]
+    subgraph Botchain["BOT Chain Mainnet (Chain ID 677)"]
         subgraph SmartContract["BotOracle.sol"]
             FeedRegistry["Feed & Round Registry"]
             Submissions["Observation Pool"]
@@ -110,7 +110,7 @@ Work 12/
 │   └── OracleConsumer.test.ts        # 3 consumer integration tests
 ├── scripts/
 │   ├── deploy.ts                     # Botchain deployment script
-│   └── seed.ts                       # Demonstration and testnet seed script
+│   └── seed.ts                       # Demonstration seed script
 ├── oracle-node/                      # Standalone provider node daemon
 │   ├── src/
 │   │   ├── index.ts                  # Daemon polling and submission loop
@@ -134,7 +134,7 @@ Work 12/
 │   │   ├── admin/                    # Role-gated admin console
 │   │   └── developer/                # IBotOracle snippets & SDK docs
 │   ├── lib/
-│   │   ├── chain.ts                  # Botchain Testnet definition (Chain ID 968)
+│   │   ├── chain.ts                  # BOT Chain Mainnet definition (Chain ID 677)
 │   │   ├── contracts/botoracle.ts    # Contract address & typed ABI
 │   │   └── identity.ts               # BotNS-ready identity resolver
 │   └── package.json
@@ -151,11 +151,12 @@ Work 12/
 
 | Parameter | Value |
 |---|---|
-| **Network Name** | Botchain Testnet / Bohr Testnet |
-| **Chain ID** | `968` |
-| **RPC Endpoint** | `https://rpc.bohr.life` |
-| **Explorer** | `https://scan.bohr.life` |
+| **Network Name** | BOT Chain Mainnet |
+| **Chain ID** | `677` |
+| **RPC Endpoint** | `https://rpc.botchain.ai` |
+| **Explorer** | `https://scan.botchain.ai` |
 | **Native Token** | `BOT` (18 decimals) |
+| **BotOracle Contract** | [`0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa`](https://scan.botchain.ai/address/0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa) |
 
 ---
 
@@ -201,16 +202,16 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## Deploying to Botchain Testnet
+## Deploying to BOT Chain Mainnet
 
 1. Copy `.env.example` to `.env`:
 ```env
 DEPLOYER_PRIVATE_KEY=0xyour_private_key_here
-BOTCHAIN_RPC_URL=https://rpc.bohr.life
+BOTCHAIN_RPC_URL=https://rpc.botchain.ai
 ```
 2. Execute deployment:
 ```bash
-npm run deploy:botchain
+npm run deploy:mainnet
 ```
 The script will output the deployed contract addresses and save metadata to `deployments/botchain.json`.
 

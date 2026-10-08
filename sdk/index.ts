@@ -1,21 +1,23 @@
 import { createPublicClient, http, defineChain, formatUnits } from "viem";
 
-export const botchainTestnet = defineChain({
-  id: 968,
-  name: "Botchain Testnet",
+export const botchain = defineChain({
+  id: 677,
+  name: "BOT Chain Mainnet",
   nativeCurrency: {
     decimals: 18,
     name: "Botchain Native Token",
     symbol: "BOT",
   },
   rpcUrls: {
-    default: { http: ["https://rpc.bohr.life"] },
-    public: { http: ["https://rpc.bohr.life"] },
+    default: { http: ["https://rpc.botchain.ai"] },
+    public: { http: ["https://rpc.botchain.ai"] },
   },
   blockExplorers: {
-    default: { name: "BohrScan", url: "https://scan.bohr.life" },
+    default: { name: "BotScan", url: "https://scan.botchain.ai" },
   },
 });
+
+export const botchainMainnet = botchain;
 
 export const BOT_ORACLE_ABI_MINIMAL = [
   {
@@ -59,9 +61,10 @@ export const BOT_ORACLE_ABI_MINIMAL = [
 
 export interface OraclePriceResponse {
   feedId: bigint;
+  name: string;
   symbol: string;
-  rawPrice: bigint;
-  formattedPrice: string;
+  answerRaw: bigint;
+  answerFormatted: string;
   decimals: number;
   updatedAt: Date;
   roundId: bigint;
@@ -70,18 +73,18 @@ export interface OraclePriceResponse {
 }
 
 /**
- * Reads the latest verified oracle answer from BotOracle on Botchain.
+ * Reads the latest verified oracle answer from BotOracle on BOT Chain Mainnet.
  * @param feedId The unique feed identifier (e.g. 1 for BTC/USD).
  * @param contractAddress The BotOracle contract address.
- * @param rpcUrl Optional custom RPC URL (defaults to https://rpc.bohr.life).
+ * @param rpcUrl Optional custom RPC URL (defaults to https://rpc.botchain.ai).
  */
 export async function getBotOraclePrice(
   feedId: number | bigint,
   contractAddress: `0x${string}`,
-  rpcUrl = "https://rpc.bohr.life"
+  rpcUrl = "https://rpc.botchain.ai"
 ): Promise<OraclePriceResponse> {
   const client = createPublicClient({
-    chain: botchainTestnet,
+    chain: botchain,
     transport: http(rpcUrl),
   });
 
@@ -101,15 +104,15 @@ export async function getBotOraclePrice(
     args: [bigFeedId],
   });
 
-  const currentTimestamp = BigInt(Math.floor(Date.now() / 1000));
-  const age = currentTimestamp - updatedAt;
-  const isStale = age > feed.heartbeat;
+  const nowSeconds = BigInt(Math.floor(Date.now() / 1000));
+  const isStale = updatedAt === 0n || nowSeconds - updatedAt > feed.heartbeat;
 
   return {
     feedId: bigFeedId,
+    name: feed.name,
     symbol: feed.symbol,
-    rawPrice: answer,
-    formattedPrice: formatUnits(answer, feed.decimals),
+    answerRaw: answer,
+    answerFormatted: formatUnits(answer, feed.decimals),
     decimals: feed.decimals,
     updatedAt: new Date(Number(updatedAt) * 1000),
     roundId,

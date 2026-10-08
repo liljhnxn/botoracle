@@ -1,7 +1,7 @@
 {
   "name": "botoracle-node",
   "version": "1.0.0",
-  "description": "Standalone BotOracle Provider Node Daemon for Botchain Testnet",
+  "description": "Standalone BotOracle Provider Node Daemon for BOT Chain Mainnet",
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",

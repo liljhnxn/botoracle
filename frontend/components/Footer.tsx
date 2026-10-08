@@ -36,26 +36,37 @@ export function Footer() {
             <ul className="space-y-2 text-xs">
               <li className="flex justify-between">
                 <span>Network</span>
-                <span className="font-mono text-slate-300">Botchain Testnet</span>
+                <span className="font-mono text-slate-300">BOT Chain Mainnet</span>
               </li>
               <li className="flex justify-between">
                 <span>Chain ID</span>
-                <span className="font-mono text-slate-300">968</span>
+                <span className="font-mono text-slate-300">677</span>
               </li>
               <li className="flex justify-between">
                 <span>Native Token</span>
                 <span className="font-mono text-primary">BOT</span>
               </li>
-              <li className="pt-1">
+              <li className="pt-1 space-y-1.5">
                 <a
-                  href="https://scan.bohr.life"
+                  href="https://scan.botchain.ai"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-1 text-primary hover:underline"
                 >
-                  <span>BohrScan Explorer</span>
+                  <span>BotScan Explorer</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
+                <div>
+                  <a
+                    href="https://scan.botchain.ai/address/0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-slate-400 hover:text-white"
+                  >
+                    <span>Verified Oracle Contract</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

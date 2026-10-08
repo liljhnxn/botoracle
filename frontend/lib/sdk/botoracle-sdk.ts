@@ -1,5 +1,5 @@
 import { createPublicClient, http, formatUnits } from "viem";
-import { botchainTestnet } from "../chain";
+import { activeBotchain } from "../chain";
 import { BOTORACLE_ABI, BOTORACLE_ADDRESS } from "../contracts/botoracle";
 
 export interface BotOraclePriceData {
@@ -25,8 +25,8 @@ export async function getBotOraclePrice(
   contractAddress: `0x${string}` = BOTORACLE_ADDRESS
 ): Promise<BotOraclePriceData> {
   const client = createPublicClient({
-    chain: botchainTestnet,
-    transport: http(process.env.NEXT_PUBLIC_BOTCHAIN_RPC_URL || "https://rpc.bohr.life"),
+    chain: activeBotchain,
+    transport: http(),
   });
 
   const bigFeedId = BigInt(feedId);

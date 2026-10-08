@@ -119,7 +119,7 @@ export function BackButton() {
         {/* Current Network Pill / Context */}
         <div className="hidden md:flex items-center gap-2 text-[11px] font-mono text-slate-400">
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-          <span>Botchain Testnet (968)</span>
+          <span>BOT Chain Mainnet (677)</span>
         </div>
       </div>
     </div>

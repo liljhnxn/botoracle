@@ -4,9 +4,9 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-export const botchainTestnet = defineChain({
-  id: 968,
-  name: "Botchain Testnet",
+export const botchain = defineChain({
+  id: 677,
+  name: "BOT Chain Mainnet",
   nativeCurrency: {
     decimals: 18,
     name: "Botchain Native Token",
@@ -14,24 +14,26 @@ export const botchainTestnet = defineChain({
   },
   rpcUrls: {
     default: {
-      http: [process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life"],
+      http: [process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai"],
     },
     public: {
-      http: [process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life"],
+      http: [process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai"],
     },
   },
   blockExplorers: {
     default: {
-      name: "BohrScan",
-      url: "https://scan.bohr.life",
+      name: "BotScan",
+      url: "https://scan.botchain.ai",
     },
   },
 });
 
+export const botchainMainnet = botchain;
+
 export function getPublicClient(rpcUrl?: string) {
   return createPublicClient({
-    chain: botchainTestnet,
-    transport: http(rpcUrl || process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life"),
+    chain: botchain,
+    transport: http(rpcUrl || process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai"),
   });
 }
 
@@ -39,7 +41,7 @@ export function getWalletClient(privateKeyHex: `0x${string}`, rpcUrl?: string) {
   const account = privateKeyToAccount(privateKeyHex);
   return createWalletClient({
     account,
-    chain: botchainTestnet,
-    transport: http(rpcUrl || process.env.BOTCHAIN_RPC_URL || "https://rpc.bohr.life"),
+    chain: botchain,
+    transport: http(rpcUrl || process.env.BOTCHAIN_RPC_URL || "https://rpc.botchain.ai"),
   });
 }

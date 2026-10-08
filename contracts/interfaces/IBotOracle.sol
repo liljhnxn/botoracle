@@ -3,7 +3,7 @@ pragma solidity ^0.8.24;
 
 /**
  * @title IBotOracle
- * @notice Lightweight interface for consuming BotOracle decentralized data feeds on Botchain Testnet.
+ * @notice Lightweight interface for consuming BotOracle decentralized data feeds on BOT Chain Mainnet.
  */
 interface IBotOracle {
     /**

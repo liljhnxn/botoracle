@@ -28,12 +28,12 @@ export function formatAddress(address: string | undefined): string {
  * Formats explorer transaction link
  */
 export function getExplorerTxUrl(txHash: string): string {
-  return `https://scan.bohr.life/tx/${txHash}`;
+  return `${process.env.NEXT_PUBLIC_BOTCHAIN_EXPLORER_URL || "https://scan.botchain.ai"}/tx/${txHash}`;
 }
 
 /**
  * Formats explorer address link
  */
 export function getExplorerAddressUrl(address: string): string {
-  return `https://scan.bohr.life/address/${address}`;
+  return `${process.env.NEXT_PUBLIC_BOTCHAIN_EXPLORER_URL || "https://scan.botchain.ai"}/address/${address}`;
 }
