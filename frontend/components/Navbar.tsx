@@ -20,6 +20,7 @@ import {
   ExternalLink,
   ChevronDown,
 } from "lucide-react";
+import { BotChainLogo } from "./BotChainLogo";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -90,8 +91,9 @@ export function Navbar() {
             className="flex items-center gap-1.5 rounded-md bg-surface-50 hover:bg-surface-100 border border-border hover:border-primary/40 px-2.5 py-1.5 text-xs font-mono text-slate-300 hover:text-white transition-all group"
             title="View Protocol Contract on BotScan"
           >
-            <ExternalLink className="h-3.5 w-3.5 text-primary group-hover:scale-110 transition-transform" />
+            <BotChainLogo size={16} />
             <span>Explorer</span>
+            <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-primary transition-colors" />
           </a>
 
           {/* Network Indicator */}
@@ -210,7 +212,7 @@ export function Navbar() {
             className="flex items-center justify-between rounded-md px-3 py-2 text-sm font-medium text-slate-300 hover:bg-surface-50 hover:text-white"
           >
             <div className="flex items-center gap-3">
-              <ExternalLink className="h-4 w-4 text-primary" />
+              <BotChainLogo size={18} />
               <span>Mainnet Explorer</span>
             </div>
             <span className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">677</span>

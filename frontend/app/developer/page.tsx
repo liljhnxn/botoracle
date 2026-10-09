@@ -14,6 +14,7 @@ import {
   BookOpen,
   ArrowRight,
 } from "lucide-react";
+import { BotChainLogo } from "../../components/BotChainLogo";
 
 export default function DeveloperPage() {
   const [copiedSolidity, setCopiedSolidity] = useState(false);
@@ -135,8 +136,9 @@ main();`;
           rel="noreferrer"
           className="flex items-center gap-2 rounded-lg bg-surface-50 border border-primary/30 hover:border-primary px-3.5 py-2 text-xs text-white hover:bg-surface-100 transition-all shadow-glow-sm"
         >
+          <BotChainLogo size={16} />
           <span>View on Mainnet Explorer</span>
-          <ExternalLink className="h-3.5 w-3.5 text-primary" />
+          <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
         </a>
       </div>
 

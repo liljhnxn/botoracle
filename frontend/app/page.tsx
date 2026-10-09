@@ -16,7 +16,10 @@ import {
   Lock,
   ExternalLink,
   CheckCircle2,
+  Globe,
+  Search,
 } from "lucide-react";
+import { BotChainLogo } from "../components/BotChainLogo";
 
 export default function HomePage() {
   // Read real contract state
@@ -60,7 +63,7 @@ export default function HomePage() {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 hover:bg-primary/20 px-4 py-1.5 text-xs font-mono font-medium text-primary mb-6 shadow-glow-sm transition-all group"
           title="View Contract on BOT Chain Mainnet Explorer"
         >
-          <span className="flex h-2 w-2 rounded-full bg-primary animate-ping" />
+          <BotChainLogo size={16} />
           <span>Live on BOT Chain Mainnet (Chain ID 677)</span>
           <span className="text-primary/40">•</span>
           <span className="text-slate-300 group-hover:text-white flex items-center gap-1">
@@ -103,8 +106,9 @@ export default function HomePage() {
             rel="noreferrer"
             className="flex items-center gap-2 rounded-lg bg-surface-50 border border-border px-6 py-3 text-sm font-semibold text-slate-300 hover:border-primary/50 transition-all hover:bg-surface-100 hover:text-white"
           >
-            <ExternalLink className="h-4 w-4 text-primary" />
+            <BotChainLogo size={18} />
             <span>Mainnet Explorer</span>
+            <ExternalLink className="h-3.5 w-3.5 text-primary ml-0.5" />
           </a>
         </div>
 
@@ -226,6 +230,88 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* BOT Chain Ecosystem Section */}
+      <section className="border-t border-border/80 bg-surface-200/40 py-20" id="ecosystem">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-primary/30 bg-gradient-to-br from-surface-100 via-surface-50 to-surface-100 p-8 sm:p-12 shadow-glow-sm relative overflow-hidden">
+            <div className="absolute right-0 top-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+            
+            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
+              <div className="max-w-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <BotChainLogo size={36} />
+                  <span className="font-mono text-xs uppercase tracking-widest text-primary font-bold">
+                    Powered By BOT Chain Ecosystem
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-bold font-mono tracking-tight text-white">
+                  Engineered for BOT Chain Infrastructure
+                </h2>
+                <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+                  BotOracle settles data consensus natively on BOT Chain (Chain ID: 677). Leveraging high-throughput consensus, sub-cent execution fees, and native oracle interfaces, BotOracle empowers autonomous agents and DeFi applications with tamper-resistant on-chain telemetry.
+                </p>
+
+                <div className="mt-6 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-300">
+                  <div className="flex items-center gap-2 rounded-md bg-surface-200/80 px-3 py-1.5 border border-border">
+                    <span className="text-slate-400">Network:</span>
+                    <span className="text-white font-semibold">BOT Chain Mainnet</span>
+                  </div>
+                  <div className="flex items-center gap-2 rounded-md bg-surface-200/80 px-3 py-1.5 border border-border">
+                    <span className="text-slate-400">Chain ID:</span>
+                    <span className="text-primary font-semibold">677</span>
+                  </div>
+                  <div className="flex items-center gap-2 rounded-md bg-surface-200/80 px-3 py-1.5 border border-border">
+                    <span className="text-slate-400">Gas Asset:</span>
+                    <span className="text-accent-emerald font-semibold">BOT</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Direct Ecosystem Action Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 w-full lg:w-80 shrink-0">
+                <a
+                  href="https://botchain.ai"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between rounded-xl border border-primary/40 bg-surface-200/90 hover:bg-surface-100 p-4 transition-all group shadow-sm hover:border-primary"
+                  id="ecosystem-botchain-website"
+                >
+                  <div className="flex items-center gap-3">
+                    <BotChainLogo size={36} />
+                    <div>
+                      <div className="text-xs font-mono font-bold text-white group-hover:text-primary transition-colors">
+                        BOT Chain Website
+                      </div>
+                      <div className="text-[11px] text-slate-400">botchain.ai</div>
+                    </div>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-primary transition-colors" />
+                </a>
+
+                <a
+                  href="https://scan.botchain.ai"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-between rounded-xl border border-primary/40 bg-surface-200/90 hover:bg-surface-100 p-4 transition-all group shadow-sm hover:border-primary"
+                  id="ecosystem-botchain-explorer"
+                >
+                  <div className="flex items-center gap-3">
+                    <BotChainLogo size={36} />
+                    <div>
+                      <div className="text-xs font-mono font-bold text-white group-hover:text-primary transition-colors">
+                        BOT Chain Explorer
+                      </div>
+                      <div className="text-[11px] text-slate-400">scan.botchain.ai</div>
+                    </div>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-primary transition-colors" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Developer Integration Callout */}
       <section className="py-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-border bg-gradient-to-br from-surface-100 via-surface-200 to-surface-100 p-8 sm:p-12 relative overflow-hidden">
@@ -251,8 +337,9 @@ export default function HomePage() {
                 rel="noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-surface-50 border border-border px-5 py-2.5 text-xs font-semibold text-slate-200 hover:text-white hover:border-slate-600 transition-all"
               >
-                <span>BotScan Explorer</span>
-                <ExternalLink className="h-3.5 w-3.5" />
+                <BotChainLogo size={18} />
+                <span>BOT Chain Explorer</span>
+                <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
               </a>
             </div>
           </div>

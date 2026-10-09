@@ -1,0 +1,122 @@
+{
+  "network": "botchainMainnet",
+  "chainId": 677,
+  "timestamp": "2026-10-09T11:39:45.951Z",
+  "deployer": "0x83acc57bb9CDe889b248E9c740F5248637cd89f4",
+  "wallets": [
+    {
+      "index": 1,
+      "address": "0x02394bd55E234CebC07fEe1d84E0AcBe992C16BD",
+      "privateKey": "0x08e8779263f1eef72e25cd433c80e36464df83c3bfde4051e18ae6bafb1c400a"
+    },
+    {
+      "index": 2,
+      "address": "0x8De1CC1a9F76A904FE1C426Ac9A10C5927a5ebE2",
+      "privateKey": "0xd9fde3b66bf12adf3d87f78ac9e6a7aad839f3549bc6b1875389cd6bc1d022aa"
+    },
+    {
+      "index": 3,
+      "address": "0x0d6A3ad91988d250DF9735B34F002060CE9AD565",
+      "privateKey": "0x9d518461ffdb7c95a266042a97b20c04be0be22c5ba2f8c751868663080856c9"
+    }
+  ],
+  "splitFundingTxs": [
+    {
+      "walletIndex": 1,
+      "recipient": "0x02394bd55E234CebC07fEe1d84E0AcBe992C16BD",
+      "amountBot": "0.00205",
+      "txHash": "0x9e531bfc1acf65d6ddbbeb97002767365966bf17fc6399afdb398c4e2ed4beb3",
+      "blockNumber": 26082097,
+      "gasUsed": "21000",
+      "feePaidBot": "0.00042",
+      "explorerUrl": "https://scan.botchain.ai/tx/0x9e531bfc1acf65d6ddbbeb97002767365966bf17fc6399afdb398c4e2ed4beb3"
+    },
+    {
+      "walletIndex": 2,
+      "recipient": "0x8De1CC1a9F76A904FE1C426Ac9A10C5927a5ebE2",
+      "amountBot": "0.00205",
+      "txHash": "0xe54fe61efac4059a172393bbd5b7b528c1f3bb7b05a10179f8c426cec28dff87",
+      "blockNumber": 26082103,
+      "gasUsed": "21000",
+      "feePaidBot": "0.00042",
+      "explorerUrl": "https://scan.botchain.ai/tx/0xe54fe61efac4059a172393bbd5b7b528c1f3bb7b05a10179f8c426cec28dff87"
+    },
+    {
+      "walletIndex": 3,
+      "recipient": "0x0d6A3ad91988d250DF9735B34F002060CE9AD565",
+      "amountBot": "0.00105",
+      "txHash": "0xd18b79fcd90d6892b4004d41c5388b1e6f9fbf84edd2d53e2f455a90cacd27b4",
+      "blockNumber": 26082109,
+      "gasUsed": "21000",
+      "feePaidBot": "0.00042",
+      "explorerUrl": "https://scan.botchain.ai/tx/0xd18b79fcd90d6892b4004d41c5388b1e6f9fbf84edd2d53e2f455a90cacd27b4"
+    }
+  ],
+  "interactions": [
+    {
+      "interaction": 1,
+      "walletIndex": 1,
+      "walletAddress": "0x02394bd55E234CebC07fEe1d84E0AcBe992C16BD",
+      "contract": "BotOracle",
+      "contractAddress": "0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa",
+      "action": "fundRewardPool(1 wei)",
+      "txHash": "0x83b8bc3997abd1cd9f3d6670ef9bde2ca737ee909089f8926551b75686852adf",
+      "blockNumber": 26082114,
+      "gasUsed": "45051",
+      "feePaidBot": "0.00090102",
+      "explorerUrl": "https://scan.botchain.ai/tx/0x83b8bc3997abd1cd9f3d6670ef9bde2ca737ee909089f8926551b75686852adf"
+    },
+    {
+      "interaction": 2,
+      "walletIndex": 2,
+      "walletAddress": "0x8De1CC1a9F76A904FE1C426Ac9A10C5927a5ebE2",
+      "contract": "BotOracle",
+      "contractAddress": "0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa",
+      "action": "fundRewardPool(1 wei)",
+      "txHash": "0x1053a8b90f4ffa13f6d6b509271c16e35ef810f3e4c82eeada1c9eb5bb3ecfea",
+      "blockNumber": 26082118,
+      "gasUsed": "27951",
+      "feePaidBot": "0.00055902",
+      "explorerUrl": "https://scan.botchain.ai/tx/0x1053a8b90f4ffa13f6d6b509271c16e35ef810f3e4c82eeada1c9eb5bb3ecfea"
+    },
+    {
+      "interaction": 3,
+      "walletIndex": 3,
+      "walletAddress": "0x0d6A3ad91988d250DF9735B34F002060CE9AD565",
+      "contract": "BotOracle",
+      "contractAddress": "0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa",
+      "action": "fundRewardPool(1 wei)",
+      "txHash": "0xa2a1721f3c677420865bf5a2e22f792bd9e1913dd57740afeae847c0cb778235",
+      "blockNumber": 26082122,
+      "gasUsed": "27951",
+      "feePaidBot": "0.00055902",
+      "explorerUrl": "https://scan.botchain.ai/tx/0xa2a1721f3c677420865bf5a2e22f792bd9e1913dd57740afeae847c0cb778235"
+    },
+    {
+      "interaction": 4,
+      "walletIndex": 1,
+      "walletAddress": "0x02394bd55E234CebC07fEe1d84E0AcBe992C16BD",
+      "contract": "BotOracle",
+      "contractAddress": "0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa",
+      "action": "fundRewardPool(1 wei)",
+      "txHash": "0x079c3ca339fb1175478776e8e11e4919b4382aa0ac62120099d92eb6af4442fe",
+      "blockNumber": 26082126,
+      "gasUsed": "27951",
+      "feePaidBot": "0.00055902",
+      "explorerUrl": "https://scan.botchain.ai/tx/0x079c3ca339fb1175478776e8e11e4919b4382aa0ac62120099d92eb6af4442fe"
+    },
+    {
+      "interaction": 5,
+      "walletIndex": 2,
+      "walletAddress": "0x8De1CC1a9F76A904FE1C426Ac9A10C5927a5ebE2",
+      "contract": "BotOracle",
+      "contractAddress": "0x5175b608d7c0e10a4eD0D605d5cA59b1f2E88BBa",
+      "action": "fundRewardPool(1 wei)",
+      "txHash": "0x8914b822aa29ea7664c1ca8be4c01bcecb38b31b0cca0ecebca47694724860b1",
+      "blockNumber": 26082129,
+      "gasUsed": "27951",
+      "feePaidBot": "0.00055902",
+      "explorerUrl": "https://scan.botchain.ai/tx/0x8914b822aa29ea7664c1ca8be4c01bcecb38b31b0cca0ecebca47694724860b1"
+    }
+  ]
+}
